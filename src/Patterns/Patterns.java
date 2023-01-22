@@ -17,7 +17,95 @@ public class Patterns {
 //        pattern9(5);
 //        pattern10(5);
 //    pattern11(5);
-    pattern12(5);
+//    pattern12(5);
+//        pattern13(5);
+//    pattern14(5);
+    pattern15(5);
+    }
+
+
+
+//      *
+//     * *
+//    *   *
+//   *     *
+//  *       *
+//   *     *
+//    *   *
+//     * *
+//      *
+static void pattern15(int n){
+    System.out.println("Pattern 15");
+    for(int row=0;row<2*n;row++){
+        int totalSpaces = row < n ? n - row : (row - (n - 2));
+        for(int space = 0 ;space < totalSpaces;space++){
+
+            System.out.print(" ");
+        }
+        int totalCols = row < n ? row+1 : n - (row - (n - 1))  ;
+        for(int col = 0;col<totalCols;col++){
+            String whatToPrint = (col == 0) ? "*" : " ";
+            System.out.print(whatToPrint);
+        }
+        for(int col = 0;col<totalCols - 1;col++){
+            String whatToPrint = (col == totalCols - 2) ? "*" : " ";
+            System.out.print(whatToPrint);
+        }
+        System.out.println();
+    }
+}
+
+
+//  *********
+//   *     *
+//    *   *
+//     * *
+//      *
+static void pattern14(int n){
+    System.out.println("Pattern 14");
+    for(int row=0;row<n;row++){
+        int totalSpaces = row;
+        for(int space = 0 ;space < totalSpaces;space++){
+            System.out.print(" ");
+        }
+        int totalCols = n - row;
+        for(int col = 0;col<totalCols;col++){
+            String whatToPrint = (col == 0  || row == 0) ? "*" : " ";
+            System.out.print(whatToPrint);
+        }
+        for(int col = 0;col<totalCols - 1;col++){
+            String whatToPrint = (col == totalCols - 2 || row == 0) ? "*" : " ";
+            System.out.print(whatToPrint);
+        }
+        System.out.println();
+    }
+}
+
+
+
+//      *
+//     * *
+//    *   *
+//   *     *
+//  *********
+    static void pattern13(int n){
+        System.out.println("Pattern 13");
+        for(int row=0;row<n;row++){
+            int totalSpaces = n - row;
+            for(int space = 0 ;space < totalSpaces;space++){
+                System.out.print(" ");
+            }
+            int totalCols =row+1;
+            for(int col = 0;col<totalCols;col++){
+                String whatToPrint = (col == 0  || row == n - 1) ? "*" : " ";
+                System.out.print(whatToPrint);
+            }
+            for(int col = 0;col<totalCols - 1;col++){
+                String whatToPrint = (col == totalCols - 2 || row == n - 1) ? "*" : " ";
+                System.out.print(whatToPrint);
+            }
+            System.out.println();
+        }
     }
 
 
