@@ -20,9 +20,98 @@ public class Patterns {
 //    pattern12(5);
 //        pattern13(5);
 //    pattern14(5);
-    pattern15(5);
+//    pattern15(5);
+//        pattern18(5);
+//    pattern19(5);
+        pattern20(5);
     }
 
+
+//          *      *
+//        *   *  *   *
+//       *      *      *
+static void pattern23(int n){
+    System.out.println("Pattern 23");
+}
+
+
+
+//        ****
+//        *  *
+//        *  *
+//        *  *
+//        ****
+static void pattern20(int n){
+    System.out.println("Pattern 20");
+    for(int row=0;row<n;row++){
+        for(int col = 0;col<n- 1 ;col++){
+            String whatToPrint = row == 0 || row == n - 1 ? "*" : col == 0 || col == n -2 ? "*" : " ";
+            System.out.print(whatToPrint);
+        }
+        System.out.println();
+    }
+}
+
+
+
+
+
+//            *        *
+//            **      **
+//            ***    ***
+//            ****  ****
+//            **********
+//            ****  ****
+//            ***    ***
+//            **      **
+//            *        *
+static void pattern19(int n){
+    System.out.println("Pattern 19");
+    for(int row=0;row<2*n;row++){
+        int totalCols = row < n ? row+1 : 2*n - row - 1  ;
+        for(int col = 0;col<totalCols;col++){
+            System.out.print("*");
+        }
+        int totalSpaces = n - totalCols;
+        for(int space = 0 ;space < totalSpaces*2;space++){
+            System.out.print(" ");
+        }
+        for(int col = 0;col<totalCols;col++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
+
+
+
+//        **********
+//        ****  ****
+//        ***    ***
+//        **      **
+//        *        *
+//        *        *
+//        **      **
+//        ***    ***
+//        ****  ****
+//        **********
+static void pattern18(int n){
+    System.out.println("Pattern 18");
+    for(int row=0;row<2*n;row++){
+        int totalCols = row < n ? n - row : (row+1) - n  ;
+        for(int col = 0;col<totalCols;col++){
+            System.out.print("*");
+        }
+        int totalSpaces = row < n ? row : 2*n - row - 1;
+        for(int space = 0 ;space < totalSpaces*2;space++){
+            System.out.print(" ");
+        }
+        for(int col = 0;col<totalCols;col++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
 
 
 //      *
