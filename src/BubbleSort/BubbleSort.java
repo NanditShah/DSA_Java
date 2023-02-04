@@ -7,7 +7,7 @@ public class BubbleSort {
         System.out.println("Bubble Sort");
         int[] arr = {2,0,2,1,1,0};
         System.out.println(Arrays.toString(arr));
-        bubbleSort(arr);
+        bubbleSortUsingRec(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -23,6 +23,26 @@ public class BubbleSort {
                 }
             }
             if(!swapped) break;
+        }
+    }
+
+    static void bubbleSortUsingRec(int[] arr){
+        helperSort(arr,0,1);
+    }
+
+    static void helperSort(int[] arr,int start,int compareIndex){
+        if(start == arr.length-1){
+            return;
+        }
+        if(compareIndex < arr.length - start){
+            if(arr[compareIndex] < arr[compareIndex-1]){
+                int temp = arr[compareIndex-1];
+                arr[compareIndex-1] = arr[compareIndex];
+                arr[compareIndex] = temp;
+            }
+            helperSort(arr,start,compareIndex+1);
+        }else{
+            helperSort(arr,start+1,1);
         }
     }
 
