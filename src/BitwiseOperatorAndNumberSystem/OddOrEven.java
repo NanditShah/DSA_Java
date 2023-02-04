@@ -10,7 +10,7 @@ public class OddOrEven {
     }
 
     static boolean isOdd(int n){
-        if((n & 1) == 1) return true;
+                    if((n & 1) == 1) return true;
         return false;
     }
 }
