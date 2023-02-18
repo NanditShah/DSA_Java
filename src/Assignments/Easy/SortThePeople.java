@@ -1,0 +1,25 @@
+package Assignments.Easy;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class SortThePeople {
+    public static void main(String[] args) {
+        System.out.println("Sort the People");
+    }
+
+    static String[] sortPeople(String[] names, int[] heights) {
+        int n = heights.length;
+        int[][] arr = new int[n][2];
+        for (int i = 0; i < n; ++i) {
+            arr[i] = new int[] {heights[i], i};
+        }
+        Arrays.sort(arr, (a, b) -> b[0] - a[0]);
+        String[] ans = new String[n];
+        for (int i = 0; i < n; ++i) {
+            ans[i] = names[arr[i][1]];
+        }
+        return ans;
+    }
+}
