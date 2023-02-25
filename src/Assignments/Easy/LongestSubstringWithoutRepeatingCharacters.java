@@ -6,7 +6,7 @@ import java.util.Set;
 public class LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
         System.out.println("Longest Substring Without Repeating Characters");
-        System.out.println(lengthOfLongestSubstring("au"));
+        System.out.println(lengthOfLongestSubstring("dvdf"));
     }
 
     static int lengthOfLongestSubstring(String s) {
@@ -18,18 +18,21 @@ public class LongestSubstringWithoutRepeatingCharacters {
         Set<Character> subStr = new HashSet<>();
 
         for(int i = 0;i<arr.length;i++){
-            char c = arr[i];
-            if(subStr.contains(Character.toLowerCase(c))){
-                if(subStr.size() > maxLen){
-                    maxLen = subStr.size();
+            for(int j = i;j<arr.length;j++){
+                char c = arr[j];
+                if(subStr.contains(Character.toLowerCase(c))){
+                    break;
                 }
-                subStr.clear();
+                subStr.add(c);
             }
-            subStr.add(c);
-        }
             if(subStr.size() > maxLen){
                 maxLen = subStr.size();
             }
+            subStr.clear();
+        }
+        if(subStr.size() > maxLen){
+            maxLen = subStr.size();
+        }
         return maxLen;
     }
 }
