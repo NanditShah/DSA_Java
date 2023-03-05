@@ -226,7 +226,55 @@ public class Leetcode {
         return true;
     }
 
-  class ListNode {
+        public void reorderList(ListNode head) {
+
+            if(head == null || head.next == null){
+                return;
+            }
+
+            ListNode mid = middleNode(head);
+            ListNode hs = reverseList(mid);
+            ListNode hf = head;
+
+            while(hf != null && hs != null){
+                ListNode temp = hf.next;
+                hf.next = hs;
+                hf = temp;
+
+                temp = hs.next;
+                hs.next = hf;
+                hs = temp;
+            }
+
+            if(hf != null){
+                hf.next = null;
+            }
+    }
+
+
+    public ListNode rotateRight(ListNode head, int k) {
+        if(head == null || head.next == null || k == 0){
+            return head;
+        }
+        ListNode tail = head;
+        ListNode prevNode = null;
+        while(tail.next != null){
+            prevNode = tail;
+            tail = tail.next;
+        }
+
+        for(int i =0;i<k;i++){
+            tail.next = head;
+            head = tail;
+
+            tail = prevNode;
+            tail.next = null;
+        }
+        System.out.println(tail.val);
+        return head;
+    }
+
+    class ListNode {
       int val;
       ListNode next;
 
