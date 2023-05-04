@@ -46,4 +46,35 @@ public class NumberOfProvinces {
         }
     }
 
+
+    /* Using disjoint set*/
+    public int findCircleNumDisSet(int[][] isConnected) {
+        int v = isConnected.length;
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+
+        for(int i = 0;i<v;i++){
+            adj.add(new ArrayList<>());
+        }
+
+        for(int i =0;i<v;i++){
+            for(int j = 0;j<v;j++){
+                if(i!=j && isConnected[i][j] == 1){
+                    adj.get(i).add(j);
+                }
+            }
+        }
+        int[] visited = new int[v];
+        int provinces = 0;
+        for(int i = 0;i<v;i++){
+            if(visited[i] == 0){
+                provinces++;
+                dfs(i,adj,visited);
+            }
+        }
+
+        return provinces;
+
+    }
+
+
 }
