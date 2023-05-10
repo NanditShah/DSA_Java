@@ -5,12 +5,13 @@ import java.util.List;
 
 public class Disjoint {
     public List<Integer> rank = new ArrayList<>();
-    public List<Integer> size = new ArrayList<>();
+    public List<Integer> sizes = new ArrayList<>();
 
     public List<Integer> parents = new ArrayList<>();
     public Disjoint(int size) {
         for(int i = 0;i<=size;i++){
             rank.add(0);
+            sizes.add(0);
             parents.add(i);
         }
     }
@@ -52,16 +53,16 @@ public class Disjoint {
 
         if(ulpU == ulpV) return;
 
-        int sizeUlpU = size.get(ulpU);
-        int sizeUlpV = size.get(ulpV);
+        int sizeUlpU = sizes.get(ulpU);
+        int sizeUlpV = sizes.get(ulpV);
 
         if(sizeUlpU < sizeUlpV){
             parents.set(ulpU,ulpV);
-            size.set(ulpV,sizeUlpU+sizeUlpV);
+            sizes.set(ulpV,sizeUlpU+sizeUlpV);
         }
         else{
             parents.set(ulpV,ulpU);
-            size.set(ulpU,sizeUlpU+sizeUlpV);
+            sizes.set(ulpU,sizeUlpU+sizeUlpV);
         }
     }
 }
