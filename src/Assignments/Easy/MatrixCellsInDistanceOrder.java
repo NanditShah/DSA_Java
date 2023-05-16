@@ -5,7 +5,7 @@ import java.util.HashMap;
 // Not completed
 public class MatrixCellsInDistanceOrder {
     public static void main(String[] args) {
-        System.out.println("Matrix Cells in Distance Order");
+        System.out.println("Learning.Matrix Cells in Distance Order");
         int[][] ans = allCellsDistOrder(1,  2,  0,  0);
         System.out.println(ans);
     }

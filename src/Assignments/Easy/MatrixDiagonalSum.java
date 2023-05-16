@@ -2,7 +2,7 @@ package Assignments.Easy;
 
 public class MatrixDiagonalSum {
     public static void main(String[] args) {
-        System.out.println("Matrix Diagonal Sum");
+        System.out.println("Learning.Matrix Diagonal Sum");
 
         int[][] mat = {{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}};
         System.out.println(diagonalSum(mat));

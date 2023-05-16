@@ -2,7 +2,7 @@ package Assignments.Easy;
 
 public class SearchMatrix {
     public static void main(String[] args) {
-        System.out.println("Search Matrix");
+        System.out.println("Search Learning.Matrix");
         boolean ans = searchMatrix(new int[][] {{1,3}},3);
         System.out.println(ans);
     }

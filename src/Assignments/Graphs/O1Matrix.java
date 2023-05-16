@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class O1Matrix {
     public static void main(String[] args) {
-        System.out.println("01 Matrix");
+        System.out.println("01 Learning.Matrix");
     }
 
     class Pair{

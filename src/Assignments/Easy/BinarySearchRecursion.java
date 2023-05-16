@@ -2,7 +2,7 @@ package Assignments.Easy;
 
 public class BinarySearchRecursion {
     public static void main(String[] args) {
-        System.out.println("Binary Search Using Recursion");
+        System.out.println("Binary Search Using Learning.Recursion");
         System.out.println(search(new int[] {-1,0,3,5,9,12},2));
     }
 

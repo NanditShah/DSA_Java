@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SpiralMatrixII {
     public static void main(String[] args) {
-        System.out.println("Spiral Matrix II");
+        System.out.println("Spiral Learning.Matrix II");
 
         int[][] ans = generateMatrix(3);
 

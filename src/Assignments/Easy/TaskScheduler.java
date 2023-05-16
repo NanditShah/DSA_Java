@@ -20,7 +20,7 @@ public class TaskScheduler {
                 = new PriorityQueue<Integer>(
                 Collections.reverseOrder());
 
-//        Queue<Integer> tasksQueue = new LinkedList<>();
+//        Learning.Queue<Integer> tasksQueue = new LinkedList<>();
         Queue<int[]> idleQueue = new LinkedList<>();
         int time = 0;
 

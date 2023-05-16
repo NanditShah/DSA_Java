@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ImplementQueueUsingStacks {
     public static void main(String[] args) {
-        System.out.println("Implement Queue using Stacks");
+        System.out.println("Implement Learning.Queue using Stacks");
     }
 
 

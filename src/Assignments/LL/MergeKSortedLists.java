@@ -1,9 +1,5 @@
 package Assignments.LL;
 
-import LL.Leetcode;
-
-import java.util.ArrayList;
-
 public class MergeKSortedLists {
     public static void main(String[] args) {
         System.out.println("Merge k Sorted Lists");

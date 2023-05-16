@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class NegativeCountInASortedMatrix {
     public static void main(String[] args) {
-        System.out.println("Count Negative Numbers in a Sorted Matrix");
+        System.out.println("Count Negative Numbers in a Sorted Learning.Matrix");
         int[][] matrix = {{4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}};
         for(int[] arr: matrix){
             System.out.println(Arrays.toString(arr));

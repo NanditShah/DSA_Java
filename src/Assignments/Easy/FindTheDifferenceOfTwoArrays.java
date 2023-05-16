@@ -4,7 +4,7 @@ import java.util.*;
 
 public class FindTheDifferenceOfTwoArrays {
     public static void main(String[] args) {
-        System.out.println("Find the Difference of Two Arrays");
+        System.out.println("Find the Difference of Two Learning.Arrays");
     }
 
     public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {

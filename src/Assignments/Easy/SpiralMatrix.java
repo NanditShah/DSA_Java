@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SpiralMatrix {
     public static void main(String[] args) {
-        System.out.println("Spiral Matrix");
+        System.out.println("Spiral Learning.Matrix");
     }
 
     public List<Integer> spiralOrder(int[][] matrix) {

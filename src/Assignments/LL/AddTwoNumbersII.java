@@ -1,7 +1,5 @@
 package Assignments.LL;
 
-import LL.Leetcode;
-
 public class AddTwoNumbersII {
     public static void main(String[] args) {
         System.out.println("Add Two Numbers II");

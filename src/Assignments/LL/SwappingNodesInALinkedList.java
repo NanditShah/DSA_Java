@@ -6,28 +6,30 @@ public class SwappingNodesInALinkedList {
     }
 
     public ListNode swapNodes(ListNode head, int k) {
-        if (head == null) {
+        if(head == null){
             return head;
         }
 
-        ListNode fast = head;
         ListNode front = head;
-        while (k > 1) {
-            fast = fast.next;
+        ListNode back = head;
+        ListNode pointer = head;
+
+        while(k > 1){
             front = front.next;
+            pointer = pointer.next;
             k--;
         }
 
-        ListNode back = head;
-        while (fast.next != null) {
+        while(pointer.next != null){
             back = back.next;
-            fast = fast.next;
+            pointer = pointer.next;
         }
 
-        int val = front.val;
-        front.val = back.val;
-        back.val = val;
+        int tempVal = back.val;
+        back.val = front.val;
+        front.val = tempVal;
 
         return head;
     }
+
 }

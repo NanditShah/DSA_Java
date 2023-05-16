@@ -3,7 +3,7 @@ package Assignments.Easy;
 public class DesignCircularQueue {
 
     public static void main(String[] args) {
-        System.out.println("Design Circular Queue");
+        System.out.println("Design Circular Learning.Queue");
 
 
           MyCircularQueue obj = new MyCircularQueue(3);

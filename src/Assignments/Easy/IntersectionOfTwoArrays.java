@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class IntersectionOfTwoArrays {
     public static void main(String[] args) {
-        System.out.println("Intersection of Two Arrays");
+        System.out.println("Intersection of Two Learning.Arrays");
         int[] is = intersection(new int[] {1,2,2,1},new int[] {2,2});
         System.out.println(Arrays.toString(is));
     }

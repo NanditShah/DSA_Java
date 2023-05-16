@@ -2,7 +2,7 @@ package Assignments.Easy;
 
 public class CheckTwoStringArraysEquivalent {
     public static void main(String[] args) {
-        System.out.println("Check If Two String Arrays are Equivalent");
+        System.out.println("Check If Two String Learning.Arrays are Equivalent");
     }
 
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
