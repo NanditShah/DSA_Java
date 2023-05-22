@@ -6,7 +6,7 @@ public class WordSearch {
         char[][] board = {{'A','B','C','E'},
                 {'S','F','C','S'},
                 {'A','D','E','E'}};
-        boolean ans = exist(board,"ABCB");
+        boolean ans = exist(board,"ABCCED");
         System.out.println(ans);
     }
 
