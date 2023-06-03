@@ -12,7 +12,7 @@ public class Subset {
         List<List<Integer>> ans = new ArrayList<>();
         dfs(nums, 0, new ArrayList<>(), ans);
         return ans;
-    }
+}
 
     static void dfs(int[] nums, int s, List<Integer> path, List<List<Integer>> ans) {
         ans.add(new ArrayList<>(path));
