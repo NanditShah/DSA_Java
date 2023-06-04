@@ -1,4 +1,4 @@
-package DSASheet.Recursion.Easy;
+package DSASheet.Recursion;
 
 public class PowXN {
     public static void main(String[] args) {

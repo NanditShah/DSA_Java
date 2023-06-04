@@ -1,4 +1,4 @@
-package DSASheet.Recursion.Easy;
+package DSASheet.Recursion;
 
 import java.util.ArrayList;
 import java.util.List;
