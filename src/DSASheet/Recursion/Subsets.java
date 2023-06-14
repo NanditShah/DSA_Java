@@ -18,7 +18,7 @@ public class Subsets {
         subsets.add(new ArrayList<>(path));
         for(int i = start;i<nums.length;i++){
             path.add(nums[i]);
-            dfs(subsets,i,path,nums);
+            dfs(subsets,i+1,path,nums);
             path.remove(path.size() - 1);
         }
     }
