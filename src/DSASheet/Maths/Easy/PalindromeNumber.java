@@ -5,7 +5,6 @@ public class PalindromeNumber {
         System.out.println("Palindrome Number");
 
         System.out.println(isPalindrome(10));
-    Integer.
     }
 
     public static boolean isPalindrome(int x) {
