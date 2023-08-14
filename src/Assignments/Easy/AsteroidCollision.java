@@ -11,37 +11,32 @@ public class AsteroidCollision {
     }
 
     public static int[] asteroidCollision(int[] asteroids) {
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> afterCollision = new Stack<>();
         for(int asteroid : asteroids){
-            boolean addFlag = true;
+            boolean addIn = true;
 
-            while(!stack.isEmpty() && asteroid < 0 && stack.peek() > 0) {
-                int topElement = stack.peek();
-                if (Math.abs(topElement) < Math.abs(asteroid)) {
-                    stack.pop();
-                } else if (Math.abs(topElement) == Math.abs(asteroid)) {
-                    addFlag = false;
-                    stack.pop();
+            while(!afterCollision.isEmpty() && asteroid < 0 && afterCollision.peek() > 0){
+                int topAsteroid = afterCollision.peek();
+                if(Math.abs(topAsteroid) < Math.abs(asteroid)){
+                    afterCollision.pop();
+                }else if(Math.abs(topAsteroid) == Math.abs(asteroid)){
+                    addIn = false;
+                    afterCollision.pop();
                     break;
                 }else{
-                    addFlag = false;
+                    addIn = false;
                     break;
                 }
             }
-
-            if(addFlag){
-                stack.push(asteroid);
-            }
+            if(addIn) afterCollision.add(asteroid);
         }
 
-        int[] ans = new int[stack.size()];
-        int i = stack.size() - 1;
-        while(!stack.isEmpty()){
-            ans[i] = stack.pop();
+        int[] ans = new int[afterCollision.size()];
+        int i = afterCollision.size() - 1;
+        while(!afterCollision.isEmpty()){
+            ans[i] = afterCollision.pop();
             i--;
         }
-
         return ans;
-
     }
 }
