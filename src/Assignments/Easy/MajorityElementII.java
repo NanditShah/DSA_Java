@@ -11,52 +11,32 @@ public class MajorityElementII {
     }
 
     public static List<Integer> majorityElement(int[] nums) {
-        int num1 = Integer.MIN_VALUE;
-        int num2 = Integer.MIN_VALUE;
-        int count1 = 0;
-        int count2 = 0;
+       int num1 = -1, num2 = -1, count1 = 0, count2 = 0;
 
-        for(int num : nums){
-            if(num == num1){
-                count1++;
-            }else if(num == num2) {
-                count2++;
-            }else if(count1 == 0){
-                num1 = num;
-                count1 = 1;
-            }else if(count2 == 0){
-                num2 = num;
-                count2 = 1;
-            }else{
-                count1 --;
-                count2 --;
-            }
-        }
+       for(int num : nums){
+           if(num == num1) count1++;
+           else if(num == num2) count2++;
+           else if(count1 == 0){
+               count1++;
+               num1 = num;
+           } else if(count2 == 0){
+               count2++;
+               num2 = num;
+           }
+       }
 
-        System.out.println(num1);
-        System.out.println(num2);
+       int num1Count = 0, num2Count = 0;
 
-        int num1Count = 0;
-        int num2Count = 0;
-        int majorityCount = (int) Math.floor(nums.length/3);
-        List<Integer> ans = new ArrayList<>();
-        for(int num : nums){
-            if(num == num1){
-                num1Count++;
-            }
-            if(num == num2){
-                num2Count++;
-            }
-        }
+       for(int num : nums){
+           if(num == num1) num1Count++;
+           else if(num == num2) num2Count++;
+       }
+       int requiredMajorityCount = nums.length / 3;
+       List<Integer> ans = new ArrayList<>();
 
+       if(num1Count >= requiredMajorityCount) ans.add(num1);
+       if(num2Count >= requiredMajorityCount) ans.add(num2);
 
-        if(num1Count > majorityCount){
-            ans.add(num1);
-        }
-        if(num2Count > majorityCount){
-            ans.add(num2);
-        }
-
-        return ans;
+       return ans;
     }
 }

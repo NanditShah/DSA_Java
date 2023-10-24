@@ -1,5 +1,7 @@
 package DSASheet.LinkedList.Medium;
 
+import java.util.Arrays;
+
 public class DesignHashMap {
     public static void main(String[] args) {
         System.out.println("Design Hash Map");
